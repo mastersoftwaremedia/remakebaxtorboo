@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Remake of BaxtorBoo!</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+ <style>
+*  {
+	margin: 0 auto;
+	padding: 0;
+
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans;
+}
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+}
+
+nav {
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #00ff00;
+
+	position: fixed;
+	z-index: 99999999;
+	text-align: center;
+	transition: all 0.4s;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 25px;
+	float: right;
+}
+nav ul li {
+	display: inline;
+	padding: 25px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: #333;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 50px;
+	transition: all 0.4s;
+}
+nav ul li a:hover {
+	color:#fff;
+}
+nav.shrink li:hover {
+	background-color: #99ff99;
+	transition: all 0.4s;
+}
+nav.shrink {
+	 height: 70px;
+}
+nav.shrink img {
+	 margin: 10px 0 0 5px;
+	 width: 50px;
+	 height: 50px;
+}
+nav.shrink .logo-font h1 {
+	 margin-top: -15px;
+	 font-size: 24px;
+
+}
+nav.shrink li a {
+	line-height: 20px;
+	font-size: 20px;
+	color: #fff;
+}
+nav.shrink li a:hover {
+	color: #fff;
+}
+img {
+	width: 80px;
+	height: 80px;
+	margin: 15px;
+	transition: all 0.4s;
+}
+nav .logo {
+	float: right;
+} 
+nav .logo-font {
+ float: left;
+ font-weight: bold;
+ margin: 30px 25px 25px 25px;
+ font-size: 25px;
+ transition: all 0.4s;
+}
+.sect {
+	width: 100%;
+	height: 100%;
+}
+.sectOne {
+	background-image: url(images/doggies6.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #24e6bf;
+}
+.sectTwo {
+height: 40%;
+}
+#about {
+	margin: 0 auto;
+	color: #423c3c;
+	width: 100%;
+}
+#about h1 {
+
+	margin: 100px 50px 100px 50px;
+	text-align: center;
+}
+#about h2 {
+	margin:50px;
+ 	text-align: center;
+}
+#about .container p {
+	margin: 50px 0 0 8%;
+	width: 55%;
+	line-height: 2em;
+}
+#about .container img {
+ float: right; 
+ margin-top: -320px;
+ margin-right: 5%;
+ width: 400px;
+ height: 300px;
+}
+
+
+#product h1{
+text-align: center;
+padding: 50px 0 50px 0;
+}
+#product .col {
+float: left;
+width: 33%;
+text-align: center;
+font-family: 'Open Sans';
+margin: 0 auto;
+}
+.col img { 
+height: 150px; 
+}
+.col h2 {
+padding: 20px;
+font-weight: 600;
+font-size: 22px;
+text-transform: uppercase;
+color: #333;
+}
+.col p {
+font-size: 14px;
+line-height: 1.5em;
+padding: 0 50px;
+margin-bottom: 40px;
+color: #333;
+}
+.col a {
+background-color: #ffffff;
+color: #333;
+border: 1px solid #333;
+border-radius: 1px;
+font-weight: 600;
+font-size: 14px;
+letter-spacing: 1.2px;
+padding: 14px 24px;
+text-decoration: none;
+}
+.col a:hover {
+background-color: #00ff00;
+}
+.clearfix {
+
+ display: block;
+ clear: both;
+ margin-bottom: 5%;
+}      
+footer {
+    background: #333;
+	margin-top: 100px;
+	 padding-top: 30px;
+	 color: #fff;
+}
+
+footer ul {
+text-align: center;
+}
+footer ul li {
+display: inline;
+}
+footer ul li img{
+width: 30px;
+height: 30px;
+}
+footer p {
+ padding: 20px;
+ font-size: 14px;
+ text-align: center;
+}  
+#contact h1 {
+text-align: center;
+}
+#contact ul {
+    padding: 0;
+    margin: 5% 0 1% 5%;
+	list-style-type: none;
+	float: left;
+	width: 23%;
+}
+#contact ul li {
+	font-weight: bold;
+	    margin: 10px 0;
+}
+#contact ul li a {
+    color: #eee;
+    text-decoration: none;
+
+}
+#contact img {
+width: 300px;
+height: 200px;
+float: right;
+margin-right: 15%;
+margin-top: 70px;
+}
+</style>
+</head>
+
+
+<body>
+<nav>
+	<div class="logo">
+		<img src="images/peticon1.png">
+	</div>
+	<div class="logo-font">
+		<h1>BaxterBoo!</h1>
+	</div>
+ <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#product">Product</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#blog">Blog</a></li>
+ </ul>
+</nav>
+
+<div class="sect sectOne" id="home">
+</div>
+
+<div class="sect" id="about">
+<h1>Who We Are</h1>
+<h2>Our little monsters... with furs.</h2>
+<div class="container">
+<p>There are plenty of pet megasites out there that are run by people who wear expensive suits with no pet hair on them. BaxterBoo.com is run by Josh & Jeremy, two guys who have been friends since childhood, and who know a thing or two about how folks like to be treated.
+
+We personally inspect every item we carry. We stock only those products that we would give to our own four-legged friends and that represent the best mix of fun, quality and value. When you shop at BaxterBoo.com, your order receives personal attention from our warehouse staff (and often sniffs of approval from a resident dog or cat). Your order will almost always be shipped the same day.
+
+We provide special discounts to existing customers because we value our relationships. We take personal pride in ensuring that you're satisfied with your order and that you'll tell your friends about Baxter Boo. We're a small company and we like it that way. Sure, we don't have the advertising budgets of most of our competitors, but we can take the time necessary to be sure that you get the level of service that you deserve.
+
+We know there are lots of places to shop for your dog or cat. Thanks for choosing Baxter Boo!</p>
+<img src="images/doggies2.jpg">
+</div>
+</div>
+
+<div class="sect" id="product">
+<h1>What We Are Making</h1>
+<div class="row">
+<div class="col">
+<img src="images/dogcage2.jpg">
+<h2>Mobile Pet Pen by Richell IB# 6757</h2>
+<p>This beautifully crafted Mobile Pet Pen has lots of high-end appeal and is loaded with safety features!</p>
+<a href="#">More Detail</a>
+</div>
+<div class="col">
+<img src="images/dogcage3.jpg">
+<h2>End Table Dog Crate - Artisan Bronze IB# 8435</h2>
+<p>The End Table Dog Crate in Artisan Bronze offers pet owners a quality, handcrafted alternative to unsightly wire pet crates! </p>
+<a href="#">More Detail</a>
+</div>
+<div class="col">
+<img src="images/dogcage5.jpg">
+<h2>Guardian Gear Pioneer Soft Crate IB# 4417</h2>
+<p>We love the spring release bars on this soft crate! There are no buttons to push or tricky bars to work. Just compress the bar, place it in the desired location, and watch it spring into place! </p>
+<a href="#">More Detail</a>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="row">
+<div class="col">
+<img src="images/dogcage.jpg">
+<h2>Slumber Pet Cuddler Dog Bed - Gray IB# 60935</h2>
+<p>With its unique 2-in-1 design, Slumber Pet™ Cuddler Beds can be used in two different ways—fold the top and sides down to use as a bolster bed, or pull the top up to create a cozy hideaway! Made of 100% polyester. </p>
+<a href="#">More Detail</a>
+</div>
+<div class="col">
+<img src="images/dogfur.jpg">
+<h2>Plaid Fur-Trimmed Dog Harness Coat - Pink and White IB# 61887</h2>
+<p>Bring on Rodeo Drive with this stylish Plaid Fur-Trimmed Dog Harness Coat - Pink and White! This darling coat by Doggie Design features a soft pink plaid that's sure to keep away the winter blues. ke your projects look great and interact beatifully.</p>
+<a href="#">More Detail</a>
+</div>
+<div class="col">
+<img src="images/carrier.jpg">
+<h2>3-in-1 Convertible Pet Carrier/Bike Basket/Car Seat - Pink IB# 6173</h2>
+<p>The 3-in-1 Convertible Pet Carrier in Pink by Pet Gear is the most convenient way to travel with your small pet. You can carry it over your shoulder while you shop. You can secure it with the seat belt in your car for a safe trip in the car. </p>
+<a href="#">More Detail</a>
+</div>
+</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="sect sectTwo" id="contact">
+<div>
+<h1>Where We Are</h1>
+ <ul>
+   <li>New York Location</li>
+   <li>3926 Anmoore Road</li>
+   <li>New York, NY 10014</li>
+   <li>718-749-1714</li>
+  </ul>
+  <ul>
+   <li>San Francisco Location</li>
+   <li>68, rue da le Couronne</li>
+   <li>75002 PARIS</li>
+   <li>02.94.23.69.56</li>  
+  </ul>
+  <img src="images/doggies1.jpg">
+</div>
+</div>
+
+<div class="clearfix"></div>
+
+<footer>
+<div class="wrapper">
+  <ul>
+      <li><a href="#"><img src="images/twittericon2.png"></a></li>
+      <li><a href="#"><img src="images/faceicon6.png"></a></li>
+      <li><a href="#"><img src="images/instagramicon1.png"></a></li>
+      <li><a href="#"><img src="images/linkinicon1.png"></a></li>
+      <li><a href="#"><img src="images/youtubeicon1.png"></a></li>
+   </ul>
+  <p>BaxterBoo! - All Rights Reserved. 2016</p>
+ </div><!--footer wrapper-->
+
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+ $(window).scroll(function(event) {
+	if($(this).scrollTop() > 1) {
+		$('nav').addClass('shrink');
+	} else {
+		$('nav').removeClass('shrink');
+	}
+  });
+
+$(document).ready(function() {
+	$('nav a[href^="#"]').on("click",function(e) {
+		e.preventDefault();
+		var target=this.hash;
+		$("html, body").animate({
+			scrollTop: $(target).offset().top}, 
+			1500)
+		});
+	});
+
+</script>
+</body>
+</html>
